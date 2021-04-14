@@ -55,7 +55,20 @@ public class Test {
 	    	int choix=sc.nextInt();
 	    	sc.nextLine();
 	    	switch(choix) {
-	    	  case 1:System.out.println(menu1);break;
+	    	  case 1:
+	    		  boolean quit = true;
+		    	   do {
+		    	        System.out.println(menu1);
+		    	        int choix11=sc.nextInt();
+		    	        switch(choix11) {
+		    	        case 6: quit=false;break;
+		    	        default:System.out.println("Indisponible pour le moment");
+		    	        }
+		    	        
+		    	      }
+		    	       while(quit);
+		    	       break;
+		    	          
 	    	  case 2:System.out.println(menu2);break;
 	    	  case 3:System.out.println(menu3);break;
 	    	  case 4:
@@ -86,9 +99,9 @@ public class Test {
 	    				 while (quitter2);
 	
 	    			   }//fin if
-	    			 
+	    			
 	    		 } //fin de la boucle for
-	    		 System.out.println("Ce groupe n'existe pas ");
+	    		 
 	    		  break;
 	    	  case 5:System.out.println("Vous Avez quitter ");quitter=false;break;
 	    	  default :System.out.println("Erreur !");
